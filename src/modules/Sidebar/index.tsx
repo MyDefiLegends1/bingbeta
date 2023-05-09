@@ -1,3 +1,4 @@
+import React from 'react';
 import { FC, useContext, useState } from 'react';
 import { Dropdown, Input, MenuProps } from 'antd';
 import { omit, sortBy } from 'lodash-es';
@@ -7,7 +8,7 @@ import { ConversationMode, RecordCardItem } from '@interfaces';
 import './index.css';
 import ImportConversationModal from '@components/ConversationModal/import';
 import RecordCard from './RecordCard';
-import React from 'react';
+
 
 const Sidebar: FC<{
   data: RecordCardItem[];
@@ -83,13 +84,14 @@ const Sidebar: FC<{
     <div className="flex flex-col h-full bg-white">
       <div className="p-4 mt-2 flex items-baseline justify-between">
         <span className="text-3xl text-gradient font-[800]">BingGPT</span>
-        <a
-          href="https://t.me/BingBlongAI"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <i className="ml-2 ri-github-fill text-xl" />
-        </a>
+<a
+  href="https://t.me/BingBlongAI"
+  target="_blank"
+  rel="noreferrer"
+>
+  <i className="ml-2 ri-github-fill text-xl" />
+</a>
+
       </div>
       <div className="p-2 flex items-center justify-between mb-4">
         <div className="rounded-xl h-10 border flex-1">
