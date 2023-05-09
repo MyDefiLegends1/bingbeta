@@ -1,4 +1,3 @@
-import React from 'react';
 import { FC, useContext, useState } from 'react';
 import { Dropdown, Input, MenuProps } from 'antd';
 import { omit, sortBy } from 'lodash-es';
