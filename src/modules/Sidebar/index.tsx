@@ -81,9 +81,9 @@ const Sidebar: FC<{
   return (
     <div className="flex flex-col h-full bg-white">
       <div className="p-4 mt-2 flex items-baseline justify-between">
-        <span className="text-3xl text-gradient font-[800]">ChatGPT</span>
+        <span className="text-3xl text-gradient font-[800]">BingGPT</span>
         <a
-          href="https://github.com/GPTGenius/chatgpt-vercel"
+          href="https://t.me/BingBlongAI"
           target="_blank"
           rel="noreferrer"
         >
@@ -135,6 +135,22 @@ const Sidebar: FC<{
         open={visible}
         onCancel={() => setVisible(false)}
       />
+      <!-- Bingblong_S2S_Rightsidebar_ROS -->
+<style>
+	@media only screen and (min-width: 0px) and (min-height: 0px) {
+		div[id^="bsa-zone_1683295210532-3_123456"] {
+			min-width: 300px;
+			min-height: 50px;
+		}
+	}
+	@media only screen and (min-width: 640px) and (min-height: 0px) {
+		div[id^="bsa-zone_1683295210532-3_123456"] {
+			min-width: 120px;
+			min-height: 600px;
+		}
+	}
+</style>
+<div id="bsa-zone_1683295210532-3_123456"></div>
     </div>
   );
 };
