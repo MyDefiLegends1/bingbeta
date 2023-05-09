@@ -7,6 +7,7 @@ import { ConversationMode, RecordCardItem } from '@interfaces';
 import './index.css';
 import ImportConversationModal from '@components/ConversationModal/import';
 import RecordCard from './RecordCard';
+import React from 'react';
 
 const Sidebar: FC<{
   data: RecordCardItem[];
@@ -130,27 +131,38 @@ const Sidebar: FC<{
             </div>
           ))}
       </div>
+      <div className="common-scrollbar flex-1 p-2 pt-0 overflow-auto">
+  <div> {/* parent div */}
+
+    {sortBy(filterData, ['time'])
+      .reverse()
+      .map((conversation, index) => (
+        <div key={conversation.key}>
+          {index !== 0 ? (
+            <div className="h-[1px] bg-[#edeeee] ml-2 mr-2" />
+          ) : null}
+          <RecordCard
+            data={conversation}
+            selected={conversation.key === currentId}
+            onSelect={() => setCurrentId(conversation.key)}
+            onDelete={
+              data.length > 1 ? () => onDelete(conversation.key) : null
+            }
+          />
+        </div>
+      ))}
+
+    {/* AD CODE HERE */}
+    <div id="bsa-zone_1683295210532-3_123456"></div>
+
+  </div>
+</div>
+
       <ImportConversationModal
         nextId={getMaxIndex(data).toString()}
         open={visible}
         onCancel={() => setVisible(false)}
       />
-      <!-- Bingblong_S2S_Rightsidebar_ROS -->
-<style>
-	@media only screen and (min-width: 0px) and (min-height: 0px) {
-		div[id^="bsa-zone_1683295210532-3_123456"] {
-			min-width: 300px;
-			min-height: 50px;
-		}
-	}
-	@media only screen and (min-width: 640px) and (min-height: 0px) {
-		div[id^="bsa-zone_1683295210532-3_123456"] {
-			min-width: 120px;
-			min-height: 600px;
-		}
-	}
-</style>
-<div id="bsa-zone_1683295210532-3_123456"></div>
     </div>
   );
 };
