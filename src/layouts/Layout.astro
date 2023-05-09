@@ -21,13 +21,13 @@ const { title } = Astro.props;
         bsaOptimize.type = 'text/javascript';
         bsaOptimize.async = true;
         bsaOptimize.src = `https://cdn4.buysellads.net/pub/bingblong.js?
-        ${new Date() - (new Date() % 600000)}`;(
-        
-          document.getElementsByTagName('head')[0] || 
+        ${new Date() - (new Date() % 600000)}`;
+        (
+          document.getElementsByTagName('head')[0] ||
           document.getElementsByTagName('body')[0]
         ).appendChild(bsaOptimize);
       })();
-    </script>    
+    </script>
   </head>
   <body>
     <slot />
