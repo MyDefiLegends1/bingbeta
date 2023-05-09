@@ -132,7 +132,7 @@ const Sidebar: FC<{
         onCancel={() => setVisible(false)}
       />
       <div className="common-scrollbar flex-1 p-2 pt-0 overflow-auto">
-        {sortBy(filterData, ["time"])
+        {sortBy(filterData, ['time'])
           .reverse()
           .map((conversation, index) => (
             <div key={conversation.key}>
@@ -149,9 +149,9 @@ const Sidebar: FC<{
               />
             </div>
           ))}
-      <div id="bsa-zone_1683295210532-3_123456"></div>
-  </div>
-</div>
+        <div id="bsa-zone_1683295210532-3_123456"></div>
+      </div>
+    </div>
   );
 };
 
