@@ -5,9 +5,10 @@
     "es2021": true,
     "node": true
   },
-  "extends": ["eslint:recommended", "airbnb-base"],
-  "plugins": ["import"],
+  "extends": ["eslint:recommended", "airbnb-base", "prettier"],
+  "plugins": ["import", "prettier"],
   "rules": {
+    "prettier/prettier": "error",
     "import/no-unresolved": 0,
     "import/extensions": 0,
     "import/prefer-default-export": 0,
