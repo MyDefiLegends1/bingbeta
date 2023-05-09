@@ -89,6 +89,7 @@ const Sidebar: FC<{
 >
   <i className="ml-2 ri-github-fill text-xl" />
 </a>
+
       </div>
       <div className="p-2 flex items-center justify-between mb-4">
         <div className="rounded-xl h-10 border flex-1">
