@@ -132,33 +132,6 @@ const Sidebar: FC<{
             </div>
           ))}
       </div>
-      <div className="common-scrollbar flex-1 p-2 pt-0 overflow-auto">
-  <div> {/* parent div */}
-
-    {sortBy(filterData, ['time'])
-      .reverse()
-      .map((conversation, index) => (
-        <div key={conversation.key}>
-          {index !== 0 ? (
-            <div className="h-[1px] bg-[#edeeee] ml-2 mr-2" />
-          ) : null}
-          <RecordCard
-            data={conversation}
-            selected={conversation.key === currentId}
-            onSelect={() => setCurrentId(conversation.key)}
-            onDelete={
-              data.length > 1 ? () => onDelete(conversation.key) : null
-            }
-          />
-        </div>
-      ))}
-
-    {/* AD CODE HERE */}
-    <div id="bsa-zone_1683295210532-3_123456"></div>
-
-  </div>
-</div>
-
       <ImportConversationModal
         nextId={getMaxIndex(data).toString()}
         open={visible}
