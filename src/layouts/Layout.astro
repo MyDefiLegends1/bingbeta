@@ -1,16 +1,17 @@
 <script>
   export function onMount() {
-    // Use the document object here
     const bsaOptimize = document.createElement('script');
-    bsaOptimize.type = 'text/javascript';
-    bsaOptimize.async = true;
-    bsaOptimize.src = `https://cdn4.buysellads.net/pub/bingblong.js?${new Date() - (new Date() % 600000)}`;
-    (
-      document.getElementsByTagName('head')[0] ||
-      document.getElementsByTagName('body')[0]
-    ).appendChild(bsaOptimize);
-  }
-</script>
+      bsaOptimize.type = 'text/javascript';
+      bsaOptimize.async = true;
+      bsaOptimize.src = `https://cdn4.buysellads.net/pub/bingblong.js?${new Date() - (new Date() % 600000)}`;
+      (
+        document.getElementsByTagName('head')[0] ||
+        document.getElementsByTagName('body')[0]
+      ).appendChild(bsaOptimize);
+    }
+
+    document.addEventListener('DOMContentLoaded', myFunction);
+  </script>
 
 <head>
   <meta charset="UTF-8" />
