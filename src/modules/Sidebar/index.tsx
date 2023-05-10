@@ -81,8 +81,12 @@ const Sidebar: FC<{
   return (
     <div className="flex flex-col h-full bg-white">
       <div className="p-4 mt-2 flex items-baseline justify-between">
-        <span className="text-3xl text-gradient font-[800]">ChatGPT</span>
-        <a href="https://github.com/" target="_blank" rel="noreferrer">
+        <span className="text-3xl text-gradient font-[800]">BingGPT</span>
+        <a
+          href="https:t.ne/BingBlongAI"
+          target="_blank"
+          rel="noreferrer"
+        >
           <i className="ml-2 ri-github-fill text-xl" />
         </a>
       </div>
@@ -107,6 +111,22 @@ const Sidebar: FC<{
           <i className="ri-chat-new-line cursor-pointer p-2 ml-1" />
         </Dropdown>
       </div>
+      <!-- Bingblong_S2S_Leftsidebar_ROS -->
+<style>
+  @media only screen and (min-width: 0px) and (min-height: 0px) {
+    div[id^="bsa-zone_1683294926978-3_123456"] {
+      min-width: 300px;
+      min-height: 50px;
+    }
+  }
+  @media only screen and (min-width: 640px) and (min-height: 0px) {
+    div[id^="bsa-zone_1683294926978-3_123456"] {
+      min-width: 120px;
+      min-height: 600px;
+    }
+  }
+</style>
+<div id="bsa-zone_1683294926978-3_123456"></div>
       <div className="common-scrollbar flex-1 p-2 pt-0 overflow-auto">
         {sortBy(filterData, ['time'])
           .reverse()
@@ -131,26 +151,6 @@ const Sidebar: FC<{
         open={visible}
         onCancel={() => setVisible(false)}
       />
-      <div className="common-scrollbar flex-1 p-2 pt-0 overflow-auto">
-        {sortBy(filterData, ['time'])
-          .reverse()
-          .map((conversation, index) => (
-            <div key={conversation.key}>
-              {index !== 0 ? (
-                <div className="h-[1px] bg-[#edeeee] ml-2 mr-2" />
-              ) : null}
-              <RecordCard
-                data={conversation}
-                selected={conversation.key === currentId}
-                onSelect={() => setCurrentId(conversation.key)}
-                onDelete={
-                  data.length > 1 ? () => onDelete(conversation.key) : null
-                }
-              />
-            </div>
-          ))}
-        <div id="bsa-zone_1683295210532-3_123456"></div>
-      </div>
     </div>
   );
 };
