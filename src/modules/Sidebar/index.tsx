@@ -81,9 +81,9 @@ const Sidebar: FC<{
   return (
     <div className="flex flex-col h-full bg-white">
       <div className="p-4 mt-2 flex items-baseline justify-between">
-        <span className="text-3xl text-gradient font-[800]">BingGPT</span>
+        <span className="text-3xl text-gradient font-[800]">ChatGPT</span>
         <a
-          href="https:t.ne/BingBlongAI"
+          href="https://github.com/GPTGenius/chatgpt-vercel"
           target="_blank"
           rel="noreferrer"
         >
@@ -130,28 +130,6 @@ const Sidebar: FC<{
             </div>
           ))}
       </div>
-      {/* add the following code */}
-      <div dangerouslySetInnerHTML={{
-        __html: `
-          <!-- Bingblong_S2S_Leftsidebar_ROS -->
-          <style>
-            @media only screen and (min-width: 0px) and (min-height: 0px) {
-              div[id^="bsa-zone_1683294926978-3_123456"] {
-                min-width: 300px;
-                min-height: 50px;
-              }
-            }
-            @media only screen and (min-width: 640px) and (min-height: 0px) {
-              div[id^="bsa-zone_1683294926978-3_123456"] {
-                min-width: 120px;
-                min-height: 600px;
-              }
-            }
-          </style>
-          <div id="bsa-zone_1683294926978-3_123456"></div>
-        `
-      }}></div>
-      {/* end of added code */}
       <ImportConversationModal
         nextId={getMaxIndex(data).toString()}
         open={visible}
