@@ -1,37 +1,25 @@
----
-export interface Props {
-  title: string;
-}
+<script>
+  export function onMount() {
+    // Use the document object here
+    const bsaOptimize = document.createElement('script');
+    bsaOptimize.type = 'text/javascript';
+    bsaOptimize.async = true;
+    bsaOptimize.src = `https://cdn4.buysellads.net/pub/bingblong.js?${new Date() - (new Date() % 600000)}`;
+    (
+      document.getElementsByTagName('head')[0] ||
+      document.getElementsByTagName('body')[0]
+    ).appendChild(bsaOptimize);
+  }
+</script>
 
-const { title } = Astro.props;
----
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/openai.webp" />
-    <link href="/remixicon.css" rel="stylesheet" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    <script type="text/javascript">
-      if (typeof document !== 'undefined') {
-      /* prettier-ignore */
-      (function () {
-          const bsaOptimize = document.createElement('script');
-          bsaOptimize.type = 'text/javascript';
-          bsaOptimize.async = true;
-          bsaOptimize.src = `https://cdn4.buysellads.net/pub/bingblong.js?${new Date() - (new Date() % 600000)}`;
-          (
-            document.getElementsByTagName('head')[0] ||
-            document.getElementsByTagName('body')[0]
-          ).appendChild(bsaOptimize);
-        })();
-      /* prettier-ignore-end */
-}
-    </script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="/openai.webp" />
+  <link href="/remixicon.css" rel="stylesheet" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{Astro.props.title}</title>
+</head>
   <body>
     <slot />
   </body>
