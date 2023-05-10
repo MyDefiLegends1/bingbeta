@@ -1,27 +1,9 @@
 ---
-import { useEffect } from 'react';
-
 export interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
-const bsaOptimize = () => {
-  const script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.async = true;
-  script.src = `https://cdn4.buysellads.net/pub/bingblong.js?${new Date() - (new Date() % 600000)}`;
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
-};
-
-const MyComponent = () => {
-  useEffect(() => {
-    if (typeof document !== 'undefined') {
-      bsaOptimize();
-    }
-  }, []);
-}
-export default MyComponent;
 ---
 
 <!DOCTYPE html>
