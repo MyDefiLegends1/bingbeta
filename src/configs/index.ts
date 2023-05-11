@@ -40,7 +40,7 @@ export const supportedLanguages = [
 ];
 
 export const defaultGloablConfig: GlobalConfig = {
-  password: '001',
+  password: '',
   openAIApiKey: '',
   model: defaultModel,
   imageModel: defaultImageModel,
