@@ -29,7 +29,7 @@ export const post: APIRoute = async ({ request }) => {
 
   if (pwd && password !== pwd) {
     return new Response(
-      JSON.stringify({ msg: 'No password or wrong password' }),
+      JSON.stringify({ msg: 'No password or wrong password. Contact us on <a href="https://t.me/BingBlong">Telegram</a>. ' }),
       {
         status: 401,
       }
